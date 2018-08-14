@@ -57,8 +57,8 @@ public struct DataShape {
 extension DataShape: CustomDebugStringConvertible {
   public var debugDescription: String {
     var dims: [String] = []
-    if width    != -1 { dims.append("\(width)")    } else { dims.append("?") }
-    if height   != -1 { dims.append("\(height)")   } else { dims.append("?") }
+    if width    != -1 { dims.append("\(width)") } else { dims.append("?") }
+    if height   != -1 { dims.append("\(height)") } else { dims.append("?") }
     if channels != -1 { dims.append("\(channels)") } else { dims.append("?") }
     return "(" + dims.joined(separator: ", ") + ")"
   }
@@ -68,7 +68,7 @@ extension DataShape: Hashable {
   // Needs to be hashable because we'll create a cache of MPSImageDescriptor
   // objects. The DataShape is the key they're stored under.
   public var hashValue: Int {
-    return width + height*1000 + channels*1000*1000
+    return width + height*1_000 + channels*1_000*1_000
   }
 }
 

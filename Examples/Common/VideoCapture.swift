@@ -91,7 +91,7 @@ public class VideoCapture: NSObject {
     previewLayer.connection?.videoOrientation = .portrait
     self.previewLayer = previewLayer
 
-    let settings: [String : Any] = [
+    let settings: [String: Any] = [
       kCVPixelBufferPixelFormatTypeKey as String: NSNumber(value: kCVPixelFormatType_32BGRA)
     ]
 
@@ -135,7 +135,7 @@ public class VideoCapture: NSObject {
     settings.previewPhotoFormat = [
       kCVPixelBufferPixelFormatTypeKey as String: settings.__availablePreviewPhotoPixelFormatTypes[0],
       kCVPixelBufferWidthKey as String: 480,
-      kCVPixelBufferHeightKey as String: 360,
+      kCVPixelBufferHeightKey as String: 360
     ]
 
     photoOutput.capturePhoto(with: settings, delegate: self)

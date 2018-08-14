@@ -4,12 +4,12 @@ import Foundation
   The list of ImageNet label names, loaded from synset_words.txt.
 */
 public class ImageNetLabels {
-  private var labels = [String](repeating: "", count: 1000)
+  private var labels = [String](repeating: "", count: 1_000)
 
   public init() {
     if let path = Bundle.main.path(forResource: "synset_words", ofType: "txt") {
       for (i, line) in lines(filename: path).enumerated() {
-        if i < 1000 {
+        if i < 1_000 {
           // Strip off the WordNet ID (the first 10 characters).
           labels[i] = String(line[line.index(line.startIndex, offsetBy: 10)...])
         }

@@ -61,9 +61,9 @@ class MNIST: NeuralNetwork {
   let conv1ImgDesc  = MPSImageDescriptor(channelFormat: .float16, width: 28, height: 28, featureChannels: 20)
   let pool1ImgDesc  = MPSImageDescriptor(channelFormat: .float16, width: 14, height: 14, featureChannels: 20)
   let conv2ImgDesc  = MPSImageDescriptor(channelFormat: .float16, width: 14, height: 14, featureChannels: 50)
-  let pool2ImgDesc  = MPSImageDescriptor(channelFormat: .float16, width:  7, height:  7, featureChannels: 50)
-  let fc1ImgDesc    = MPSImageDescriptor(channelFormat: .float16, width:  1, height:  1, featureChannels: 320)
-  let outputImgDesc = MPSImageDescriptor(channelFormat: .float16, width:  1, height:  1, featureChannels: 10)
+  let pool2ImgDesc  = MPSImageDescriptor(channelFormat: .float16, width: 7, height: 7, featureChannels: 50)
+  let fc1ImgDesc    = MPSImageDescriptor(channelFormat: .float16, width: 1, height: 1, featureChannels: 320)
+  let outputImgDesc = MPSImageDescriptor(channelFormat: .float16, width: 1, height: 1, featureChannels: 10)
 
   let grayImg: MPSImage
 

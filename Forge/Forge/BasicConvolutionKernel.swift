@@ -89,9 +89,9 @@ public class BasicConvolutionKernel: ForgeKernel {
   public override func encode(commandBuffer: MTLCommandBuffer,
                               sourceImage: MPSImage, destinationImage: MPSImage) {
     // TODO: set the KernelParams based on clipRect, destinationFeatureChannelOffset, edgeMode
-    params.inputOffsetX = Int16(offset.x);
-    params.inputOffsetY = Int16(offset.y);
-    params.inputOffsetZ = Int16(offset.z);
+    params.inputOffsetX = Int16(offset.x)
+    params.inputOffsetY = Int16(offset.y)
+    params.inputOffsetZ = Int16(offset.z)
 
     if let encoder = commandBuffer.makeComputeCommandEncoder() {
       encoder.setComputePipelineState(pipeline)

@@ -23,7 +23,7 @@
 import MetalKit
 
 let textureLoader: MTKTextureLoader = {
-  return MTKTextureLoader(device: MTLCreateSystemDefaultDevice()!)
+  MTKTextureLoader(device: MTLCreateSystemDefaultDevice()!)
 }()
 
 /**
@@ -44,7 +44,7 @@ public func loadTexture(named filename: String) -> MTLTexture? {
 public func loadTexture(url: URL) -> MTLTexture? {
   do {
     return try textureLoader.newTexture(URL: url, options: [
-      MTKTextureLoader.Option.SRGB : NSNumber(value: false)
+      MTKTextureLoader.Option.SRGB: NSNumber(value: false)
     ])
   } catch {
     print("Error: could not load texture \(error)")

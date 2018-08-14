@@ -55,8 +55,8 @@ class YOLO: NeuralNetwork {
              --> MaxPooling(kernel: (2, 2), stride: (2, 2))
              --> Convolution(kernel: (3, 3), channels: 512, activation: leaky, name: "conv6")
              --> MaxPooling(kernel: (2, 2), stride: (1, 1), padding: .same)
-             --> Convolution(kernel: (3, 3), channels: 1024, activation: leaky, name: "conv7")
-             --> Convolution(kernel: (3, 3), channels: 1024, activation: leaky, name: "conv8")
+             --> Convolution(kernel: (3, 3), channels: 1_024, activation: leaky, name: "conv7")
+             --> Convolution(kernel: (3, 3), channels: 1_024, activation: leaky, name: "conv8")
              --> Convolution(kernel: (1, 1), channels: 125, activation: nil, name: "conv9")
 
     model = Model(input: input, output: output)

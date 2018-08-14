@@ -2,13 +2,13 @@ import Foundation
 
 var verbose = false
 
-func assertEqual<T>(_ a: T, _ b: T) where T:Equatable {
+func assertEqual<T>(_ a: T, _ b: T) where T: Equatable {
   if a != b {
     fatalError("Assertion failed: \(a) not equal to \(b)")
   }
 }
 
-func assertEqual<T>(_ a: [T], _ b: [T]) where T:Equatable {
+func assertEqual<T>(_ a: [T], _ b: [T]) where T: Equatable {
   if a.count != b.count {
     fatalError("Assertion failed: array sizes not the same")
   }

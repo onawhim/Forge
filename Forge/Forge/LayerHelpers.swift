@@ -43,6 +43,7 @@ public var biasLoader: ((String, Int) -> ParameterData?)?
     - kernel: `(width, height)`
     - stride: `(x, y)`
 */
+@available(iOS, deprecated: 11.0)
 public func convolution(device: MTLDevice,
                         kernel: (Int, Int),
                         inChannels: Int,
@@ -132,6 +133,7 @@ public func averagePooling(device: MTLDevice,
     - inChannels: The depth of the output image from the previous layer.
     - fanOut: The number of neurons in this layer.
 */
+@available(iOS, deprecated: 11.0)
 public func dense(device: MTLDevice,
                   shape: (Int, Int),
                   inChannels: Int,
@@ -278,6 +280,7 @@ public func depthwiseConvolution(device: MTLDevice,
 /**
   Creates a 1x1 convolution layer.
 */
+@available(iOS, deprecated: 11.0)
 public func pointwiseConvolution(device: MTLDevice,
                                  inChannels: Int,
                                  outChannels: Int,

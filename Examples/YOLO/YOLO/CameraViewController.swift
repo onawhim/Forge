@@ -66,7 +66,7 @@ class CameraViewController: UIViewController {
 
     // Initialize the camera.
     startupGroup.enter()
-    videoCapture.setUp(sessionPreset: .vga640x480) { success in
+    videoCapture.setUp(sessionPreset: .vga640x480) { _ in
       // Add the video preview into the UI.
       if let previewLayer = self.videoCapture.previewLayer {
         self.videoPreview.layer.addSublayer(previewLayer)

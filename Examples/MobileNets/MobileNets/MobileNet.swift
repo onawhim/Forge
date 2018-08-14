@@ -31,7 +31,7 @@ class MobileNet: NeuralNetwork {
               widthMultiplier: Float = 1,
               resolutionMultiplier: Float = 1,
               shallow: Bool = false,
-              classes: Int = 1000,
+              classes: Int = 1_000,
               inflightBuffers: Int) {
 
     self.classes = classes

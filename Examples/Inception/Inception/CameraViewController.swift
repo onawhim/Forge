@@ -53,7 +53,7 @@ class CameraViewController: UIViewController {
 
     // Initialize the camera.
     startupGroup.enter()
-    videoCapture.setUp { success in
+    videoCapture.setUp { _ in
       // Add the video preview into the UI.
       if let previewLayer = self.videoCapture.previewLayer {
         self.videoPreview.layer.addSublayer(previewLayer)
