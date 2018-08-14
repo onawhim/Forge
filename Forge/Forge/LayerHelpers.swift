@@ -185,6 +185,7 @@ public func dense(device: MTLDevice,
     - fanIn: The number of neurons in the previous fully-connected layer.
     - fanOut: The number of neurons in this layer.
 */
+@available(iOS, deprecated: 11.0)
 public func dense(device: MTLDevice,
                   fanIn: Int,
                   fanOut: Int,
